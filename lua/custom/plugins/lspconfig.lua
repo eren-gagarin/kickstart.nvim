@@ -224,6 +224,22 @@ return {
           },
         },
       },
+      pylsp = {
+        settings = {
+          pylsp = {
+            plugins = {
+              pycodestyle = { enabled = true }, -- Enable linting (optional, adjust as needed)
+              jedi_completion = { enabled = true }, -- Enable autocompletion
+              jedi_definition = { enabled = true }, -- Enable go-to-definition
+              jedi_references = { enabled = true }, -- Enable find references
+              jedi_signature_help = { enabled = true }, -- Enable signature help
+              -- Disable plugins that might conflict or slow down
+              pylint = { enabled = false },
+              flake8 = { enabled = false },
+            },
+          },
+        },
+      },
     }
 
     -- Ensure the servers and tools above are installed
